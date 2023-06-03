@@ -7,10 +7,10 @@ import Items from "./Items/Items";
 function App() {
   const [items, setItems] = useState([
     {name: 'Hamburger', count: 0, price: 80},
-    {name: 'Cheeseburger', count: 1, price: 90},
+    {name: 'Cheeseburger', count: 0, price: 90},
     {name: 'Fries', count: 0, price: 60},
     {name: 'Coffee', count: 0, price: 70},
-    {name: 'Tea', count: 1, price: 50},
+    {name: 'Tea', count: 0, price: 50},
     {name: 'Cola', count: 0, price: 40}
   ]);
 
@@ -39,19 +39,20 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div className="order-details">
-        {items.map((item, index)=> (
-            <Order key={index} name={item.name} count={item.count} price={item.price} remove={()=> removeItem(index)}/>
-        ))}
-        <TotalPrice total={totalPrice()}/>
+      <div className="App">
+        <div className="order-details">
+          <h3 className="order-title">Order : </h3>
+          {items.map((item, index)=> (
+              <Order key={index} name={item.name} count={item.count} price={item.price} remove={()=> removeItem(index)}/>
+          ))}
+          <TotalPrice total={totalPrice()}/>
+        </div>
+        <div className="items">
+          {items.map((item, index) =>(
+              <Items key={index} name={item.name} price={item.price} onClick={() => addItem(index)}/>
+          ))}
+        </div>
       </div>
-      <div className="items">
-        {items.map((item, index) =>(
-            <Items key={index} name={item.name} price={item.price} onClick={() => addItem(index)}/>
-        ))}
-      </div>
-    </div>
   );
 }
 

@@ -6,14 +6,14 @@ const TotalPrice:React.FC<TotalPriceProps> = (props) => {
     if (props.total === 0) {
         return (
             <div>
-                Order is empty
+                <p className="order-empty">Order is empty!</p>
             </div>
         )
     } else {
         return (
-            <div>
-                <span>Total price:</span>
-                <span>{props.total}</span>
+            <div className="order-items">
+                <span className="total-text">Total price:</span>
+                <span className="total-number">{props.total} KGS</span>
             </div>
         );
     }

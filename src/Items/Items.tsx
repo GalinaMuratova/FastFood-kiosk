@@ -11,8 +11,8 @@ const Items:React.FC<ItemsProps> = (props) => {
         <div className="dish" onClick={props.onClick}>
             <div className={props.name + '-img'}></div>
             <div>
-                <h4>{props.name}</h4>
-                <p>Price:{props.price}</p>
+                <h3>{props.name}</h3>
+                <p>Price:{props.price} kgs</p>
             </div>
         </div>
     );

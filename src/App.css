@@ -1,34 +1,106 @@
 body {
-  background-color: #f3f3f3;
-  font-size: 20px;
+  background-color: #2E2300;
+  font-size: 18px;
+  font-family: 'Manrope', sans-serif;
 }
 
 .App {
   display: flex;
   justify-content: center;
+  margin: 20px auto 0;
 }
 
 .order-details {
-  background-color: #c9c9c9;
+  display: flex;
+  flex-direction: column;
+  background-color: #4C6F2E;
+  width: 20%;
+  box-shadow: 0 0 8px 0 rgba(34, 60, 80, 0.2) inset;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 18px;
+  border: 5px solid #00000070;
+  border-radius: 8px;
+}
+
+.order-empty {
+  background-color: #f8e8d285;
+  margin: 10px 14px;
+  padding: 10px 10px 45px;
+  box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+  border-radius: 8px;
+}
+
+.dishes-order {
+  display: flex;
+  background-color: #f8e8d285;
+  margin: 5px 5px 5px;
+  padding: 0 5px 10px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.order-title {
+  margin: 10px 0;
+}
+
+.order-items {
+  margin: auto 10px 10px;
+  padding: 10px 10px 45px;
+  border-radius: 8px;
+  background-color: #ffffff4a;
+}
+
+.total-number {
+  font-weight: 700;
+  color: #a70000;
+}
+
+.name-item {
+  margin-top: 5px;
+}
+
+.count-item {
+  margin: 5px 15px 0;
+}
+
+.price-item {
+  margin: 5px 0 0 auto;
 }
 
 .remove-btn {
+  border: none;
+  border-radius: 8px;
   background-image: url("https://cdn.icon-icons.com/icons2/2406/PNG/512/trash_remove_icon_145922.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+  margin: 5px 0 0 auto;
 }
 
 .items {
-  background-color: white;
+  background-color: #C05805;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  border-radius: 8px;
 }
 
 .dish {
   display: flex;
-  padding: 10px;
-  margin: 5px;
-  border: 2px solid #c9c9c9;
+  padding: 0 20px 0 0;
+  margin: 20px;
+  transition: all 1s;
+  width: 280px;
+  border-radius: 8px;
+  background-color: #C9A66B;
+}
+
+.dish:hover {
+  background-color: #DB9501;
+  box-shadow: 6px 7px 0 0 rgba(0,0,0,0.63);
+  transform: scale(1.1);
 }
 
 .Hamburger-img,
@@ -38,14 +110,14 @@ body {
 .Tea-img,
 .Cola-img {
   margin: 10px 0 0;
-  width: 100px;
-  height: 80px;
+  width: 125px;
+  height: 100px;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .Hamburger-img {
-  background-image: url("https://freepngimg.com/convert-png/10727-burger-png-picture");
+  background-image: url("https://freepngimg.com/thumb/burger/7-2-burger-png-picture.png");
 }
 
 .Cheeseburger-img {
@@ -61,7 +133,7 @@ body {
 }
 
 .Tea-img {
-  background-image: url("https://pngimg.com/d/tea_PNG16927.png");
+  background-image: url("https://freepngimg.com/thumb/tea/3-2-tea-free-png-image.png");
 }
 
 .Cola-img {
