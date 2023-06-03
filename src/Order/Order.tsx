@@ -4,6 +4,7 @@ interface OrderProps {
     name: string;
     count:number;
     price:number;
+    remove:React.MouseEventHandler;
 }
 const Order:React.FC<OrderProps> = (props) => {
     if (props.count !== 0) {
@@ -13,6 +14,7 @@ const Order:React.FC<OrderProps> = (props) => {
                     <span>{props.name}</span>
                     <span>x{props.count}</span>
                     <span>{props.price} KGS</span>
+                    <button className="remove-btn" onClick={props.remove}></button>
                 </div>
             </div>
         );

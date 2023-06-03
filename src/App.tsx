@@ -30,12 +30,19 @@ function App() {
     setItems(copyItems);
   }
 
+  const removeItem = (index:number) => {
+    const copyItems = [...items];
+    const itemCopy = {...items[index]};
+    itemCopy.count -= 1;
+    copyItems[index] = itemCopy;
+    setItems(copyItems);
+  }
 
   return (
     <div className="App">
       <div className="order-details">
         {items.map((item, index)=> (
-            <Order key={index} name={item.name} count={item.count} price={item.price}/>
+            <Order key={index} name={item.name} count={item.count} price={item.price} remove={()=> removeItem(index)}/>
         ))}
         <TotalPrice total={totalPrice()}/>
       </div>

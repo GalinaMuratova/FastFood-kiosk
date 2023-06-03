@@ -12,6 +12,14 @@ body {
   background-color: #c9c9c9;
 }
 
+.remove-btn {
+  background-image: url("https://cdn.icon-icons.com/icons2/2406/PNG/512/trash_remove_icon_145922.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
 .items {
   background-color: white;
 }
